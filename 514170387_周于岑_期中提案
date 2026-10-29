@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每一杯咖啡背後的氣候故事 - 賽道 C 社會議題倡議平台</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP & ScrollTrigger 滾動敘事套件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { background-color: #121212; color: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+        .glass-panel { background: rgba(25, 25, 25, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.2); }
+    </style>
+</head>
+<body class="relative selection:bg-emerald-500 selection:text-black">
+    <!-- 頂部導航列 (對應賽道C：數據參考源導航與資訊架構) -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-emerald-900/30 px-6 py-4 flex justify-between items-center">
+        <h1 class="text-emerald-400 font-bold tracking-wider text-sm md:text-base">🌱 永續咖啡倡議平台 | 賽道 C 期中專案</h1>
+        <nav class="hidden md:flex gap-6 text-sm">
+            <a href="#story1" class="hover:text-emerald-400 transition focus:outline-none focus:ring-2 focus:ring-emerald-400">01. 產地危機</a>
+            <a href="#story2" class="hover:text-emerald-400 transition focus:outline-none focus:ring-2 focus:ring-emerald-400">02. 碳足跡拆解</a>
+            <a href="#story3" class="hover:text-emerald-400 transition focus:outline-none focus:ring-2 focus:ring-emerald-400">03. 永續解方</a>
+            <a href="#petition" class="hover:text-emerald-400 transition focus:outline-none focus:ring-2 focus:ring-emerald-400">04. 倡議連署</a>
+        </nav>
+    </header>
+
+    <!-- Hero 沉浸式首頁 (賽道C必備模組) -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-600 via-transparent to-transparent"></div>
+        <div class="z-10 max-w-3xl space-y-6">
+            <span class="text-emerald-400 tracking-widest uppercase text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/30">賽道 C：社會議題倡議平台</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">每一杯咖啡背後的氣候故事</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed">透過視覺化與滾動敘事（Scrollytelling），化解公共數據距離感，深入探索全球暖化對產地的衝擊[span_2](start_span)[span_2](end_span)。</p>
+        </div>
+        <div class="absolute bottom-8 animate-bounce text-emerald-400 text-sm">↓ 向下滾動體驗敘事</div>
+    </section>
+
+    <!-- 滾動敘事 (Scrollytelling) 內容區塊 -->
+    <main class="relative">
+        <section id="story1" class="h-screen flex items-center justify-center px-6">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transition hover:border-emerald-500">
+                <span class="text-emerald-400 font-mono text-sm">Phase 01 - 產地危機</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">氣候變遷威脅咖啡帶</h3>
+                <p class="text-gray-300 leading-relaxed">隨著氣溫上升與降雨異常，傳統莊園面臨極端乾旱與病蟲害，阿拉比卡種植面積正逐步縮減。</p>
+            </div>
+        </section>
+        <section id="story2" class="h-screen flex items-center justify-center px-6">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transition hover:border-emerald-500">
+                <span class="text-emerald-400 font-mono text-sm">Phase 02 - 碳足跡拆解</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">從種植到沖煮的碳排放</h3>
+                <p class="text-gray-300 leading-relaxed">跨國運輸與烘焙佔了整體供應鏈近 60% 的碳足跡，優化供應鏈是當務之急。</p>
+            </div>
+        </section>
+        <section id="story3" class="h-screen flex items-center justify-center px-6">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transition hover:border-emerald-500">
+                <span class="text-emerald-400 font-mono text-sm">Phase 03 - 永續解方</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">支持遮蔭栽種與公平貿易</h3>
+                <p class="text-gray-300 leading-relaxed">透過生態農法保護生物多樣性並保障小農收益，讓精品咖啡產業實現永續共好。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 數據參考源與線上倡議連署 (賽道C必備模組) -->
+    <footer id="petition" class="py-20 px-6 glass-panel border-t border-emerald-900/30 text-center">
+        <div class="max-w-2xl mx-auto space-y-6">
+            <h4 class="text-emerald-400 font-bold text-xl">🌐 數據參考源與線上倡議連署</h4>
+            <p class="text-gray-300 text-sm leading-relaxed bg-black/30 p-4 rounded-xl border border-white/5">
+                數據參考源：國際咖啡組織 (ICO)、聯合國氣候變遷專門委員會 (IPCC) 報告。邀請您參與永續採購連署[span_3](start_span)[span_3](end_span)。
+            </p>
+            <div class="pt-4">
+                <!-- 具備 Default, Hover, Active, Focus, Disabled 完整狀態定義的按鈕 -->
+                <button onclick="alert('感謝您的響應！連署已成功送出。')" 
+                        class="bg-emerald-600 hover:bg-emerald-500 active:scale-95 focus:outline-none focus:ring-4 focus:ring-emerald-400 disabled:opacity-50 text-white font-bold px-8 py-3 rounded-full transition shadow-lg cursor-pointer">
+                    參與響應連署
+                </button>
+            </div>
+            <p class="text-gray-500 text-xs pt-4">© 2026 多媒體網頁設計期中專案 - 賽道 C：社會議題倡議平台[span_4](start_span)[span_4](end_span)</p>
+        </div>
+    </footer>
+
+    <!-- GSAP 捲動動畫控制 -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll('main section, footer').forEach((section) => {
+            gsap.fromTo(section.querySelector('div'), { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: section, start: "top 75%", end: "top 40%", scrub: 1 }
+            });
+        });
+    </script>
+</body>
+</html>
